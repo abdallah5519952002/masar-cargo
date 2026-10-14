@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Truck, Search, ShieldCheck, Printer, PlusCircle, Phone } from 'lucide-react';
+import { Truck, Search, Printer, PlusCircle } from 'lucide-react';
 import { supabase } from './supabaseClient';
 
 export default function App() {
@@ -95,7 +95,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 font-sans" dir="rtl">
-      {/* Header */}
       <header className="bg-slate-900 border-b border-slate-800 p-4 flex justify-between items-center shadow-md">
         <div className="flex items-center space-x-reverse space-x-3">
           <div className="w-10 h-10 bg-amber-500 text-slate-950 font-black text-xl rounded-xl flex items-center justify-center">M</div>
@@ -112,7 +111,6 @@ export default function App() {
         </div>
       </header>
 
-      {/* Main Content */}
       <main className="p-4 md:p-6 max-w-6xl mx-auto space-x-reverse space-y-4">
         <div className="flex flex-col md:flex-row gap-3 justify-between items-center bg-slate-900 p-4 rounded-xl border border-slate-800">
           <div className="relative w-full md:w-80">
@@ -135,7 +133,6 @@ export default function App() {
           </button>
         </div>
 
-        {/* Table */}
         <div className="bg-slate-900 border border-slate-800 rounded-xl overflow-x-auto shadow-md">
           <table className="w-full text-right text-xs">
             <thead className="bg-slate-950 text-slate-400 border-b border-slate-800">
@@ -177,7 +174,6 @@ export default function App() {
         </div>
       </main>
 
-      {/* Modal: New Shipment */}
       {showModal && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center p-4 z-50">
           <div className="bg-slate-900 border border-slate-800 p-5 rounded-xl max-w-lg w-full text-xs space-y-3">
@@ -254,7 +250,6 @@ export default function App() {
         </div>
       )}
 
-      {/* Modal: Print Waybill */}
       {selectedShipment && (
         <div className="fixed inset-0 bg-black/80 flex items-center justify-center p-4 z-50">
           <div className="bg-white text-slate-950 p-6 rounded-xl max-w-sm w-full space-y-3 text-xs shadow-2xl">
